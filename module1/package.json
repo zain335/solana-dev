@@ -11,6 +11,8 @@
     "esrun": "^3.2.26"
   },
   "scripts": {
-    "run:lab1": "esrun ./lesson1/lab/generate-keypair.ts"
+    "lesson1:lab": "esrun ./lesson1/lab/generate-keypair.ts",
+    "lesson2:lab": "esrun ./lesson2/lab/check-balance.ts",
+    "lesson2:challenge": "esrun ./lesson2/challenge/check-balance.ts"
   }
 }

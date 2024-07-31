@@ -18,11 +18,11 @@ const generateNewKeypair = async () => {
     await addKeypairToEnvFile(keypair, "SECRET_KEY");
     console.log(`✅ Finished!`);
   } catch (error: any) {
-    console.error(`Error adding keypair to .env file: ${error.message}`);
+    throw new Error(`Error adding keypair to .env file: ${error.message}`);
   }
 };
 
-const loadKeypairFromEnvironment = async () => {
+export const loadKeypairFromEnvironment = (params?: { logs?: boolean }) => {
   try {
     const secretKeyString = process.env.SECRET_KEY;
     if (!secretKeyString) {
@@ -32,22 +32,29 @@ const loadKeypairFromEnvironment = async () => {
     let secretKey = Uint8Array.from(JSON.parse(secretKeyString));
     const keypair = Keypair.fromSecretKey(secretKey);
 
-    console.log(`We've loaded our secret key securely, using an env file!`);
-    console.log(
-      `Public Key of loaded secret key: ${keypair.publicKey.toBase58()}`
-    );
-    console.log(`✅ Finished!`);
+    if (params?.logs) {
+      console.log(`We've loaded our secret key securely, using an env file!`);
+      console.log(
+        `Public Key of loaded secret key: ${keypair.publicKey.toBase58()}`
+      );
+      console.log(`✅ Finished!`);
+    }
+    return keypair;
   } catch (error: any) {
-    console.error(`Error loading keypair from environment: ${error.message}`);
+    throw new Error(`Error loading keypair from environment: ${error.message}`);
   }
 };
 
 function main() {
-  // Uncomment to generate and save a new keypair
-  generateNewKeypair();
+  try {
+    // Uncomment to generate and save a new keypair
+    generateNewKeypair();
 
-  // Uncomment to load keypair from environment
-  // loadKeypairFromEnvironment();
+    // Uncomment to load keypair from environment
+    loadKeypairFromEnvironment({ logs: true });
+  } catch (error) {
+    console.error(error);
+  }
 }
 
-main();
+// main();
