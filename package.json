@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "@types/bs58": "^4.0.4",
+    "dotenv": "^16.4.5",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@solana-developers/helpers": "^2.4.0",
+    "@solana/web3.js": "^1.95.2",
+    "bs58": "^6.0.0",
+    "esrun": "^3.2.26"
+  },
+  "scripts": {
+    "run:lab1": "esrun ./lesson1/lab/generate-keypair.ts"
+  }
+}
