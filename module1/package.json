@@ -13,6 +13,7 @@
   "scripts": {
     "lesson1:lab": "esrun ./lesson1/lab/generate-keypair.ts",
     "lesson2:lab": "esrun ./lesson2/lab/check-balance.ts",
-    "lesson2:challenge": "esrun ./lesson2/challenge/check-balance.ts"
+    "lesson2:challenge": "esrun ./lesson2/challenge/check-balance.ts",
+    "lesson3:lab": "esrun ./lesson3/lab/transfer.ts"
   }
 }
