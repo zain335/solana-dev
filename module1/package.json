@@ -5,7 +5,9 @@
     "typescript": "^5.5.4"
   },
   "dependencies": {
+    "@metaplex-foundation/mpl-token-metadata": "2",
     "@solana-developers/helpers": "^2.4.0",
+    "@solana/spl-token": "^0.4.8",
     "@solana/web3.js": "^1.95.2",
     "bs58": "^6.0.0",
     "esrun": "^3.2.26"
@@ -14,6 +16,7 @@
     "lesson1:lab": "esrun ./lesson1/lab/generate-keypair.ts",
     "lesson2:lab": "esrun ./lesson2/lab/check-balance.ts",
     "lesson2:challenge": "esrun ./lesson2/challenge/check-balance.ts",
-    "lesson3:lab": "esrun ./lesson3/lab/transfer.ts"
+    "lesson3:lab": "esrun ./lesson3/lab/transfer.ts",
+    "lesson4:lab": "esrun ./lesson4/lab/index.ts"
   }
 }
