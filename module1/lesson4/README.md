@@ -1,14 +1,11 @@
 ## Solana Development Course
 
-### Lesson 3 | Create Transactions on the Solana Network
+### Lesson 4 | Create Tokens With The Token Program
 
 #### Lab
 
-- Basic scaffolding
-- Create the transaction and run it
-
-#### Challenge
-
-- How much SOL did the transfer take? What is this in USD?
-- How long does the transfer take?
-- What do you think "confirmed" means?
+- Create the Token Mint
+- Make some token metadata
+- Create an Associated Token Account to store the tokens
+- Mint Tokens
+- Transfer Tokens
