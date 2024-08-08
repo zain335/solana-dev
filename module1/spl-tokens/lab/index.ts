@@ -9,7 +9,9 @@ async function main() {
     const args = process.argv.slice(2);
 
     if (args.length === 0) {
-      console.log("Please provide an argument: 'mint' or 'metadata'");
+      console.log(
+        "Please provide an argument: 'create-mint', 'metadata', 'ata', 'mint-token', or 'transfer'"
+      );
       return;
     }
 
@@ -36,3 +38,6 @@ async function main() {
 }
 
 main();
+
+
+// collection address:7UeQt4SavvYgG2hxFB8AqPVu1kT7rK24PoWj6A8CB7BZ

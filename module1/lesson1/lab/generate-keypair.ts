@@ -22,9 +22,13 @@ const generateNewKeypair = async () => {
   }
 };
 
-export const loadKeypairFromEnvironment = (params?: { logs?: boolean }) => {
+export const loadKeypairFromEnvironment = (params?: {
+  logs?: boolean;
+  env?: string;
+}) => {
   try {
-    const secretKeyString = process.env.SECRET_KEY;
+    const ENV_VARIABLE = params?.env ? params.env : "SECRET_KEY";
+    const secretKeyString = process.env[ENV_VARIABLE];
     if (!secretKeyString) {
       throw new Error(`Invalid SECRET_KEY`);
     }
